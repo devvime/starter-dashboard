@@ -4,7 +4,9 @@ Initial project for the development of Web applications based on Rest API`s and 
 
 ***
 
-### Specifications and Dependencies
+### Dependencies
 
 - [Kiichi-php](https://github.com/devvime/kiichi-php)
 - [Hiroki-js](https://github.com/devvime/hiroki-js)
+
+
