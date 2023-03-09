@@ -1,0 +1,25 @@
+<section class="dashboard">
+  <nav class="main-nav bg-light slide-page">
+    <button class="btnMenu"><i class="material-icons">menu</i></button>
+    <p class="text-center mb-0">{{ welcome }}, {{ name }}</p>
+  </nav>
+  <aside>
+    <nav>
+      <div class="logo">
+        <img src="{{ logo }}" alt="">
+      </div>
+      <div class="menu">
+        <div class="item" onclick="blots.redirect('/dashboard')">
+          Dashboard <i class="material-icons">dashboard</i>
+        </div>
+        <div class="item" onclick="blots.redirect('/user-config')">
+          User config <i class="material-icons">settings</i>
+        </div>
+        <div class="item" id="logout">
+          Exit <i class="material-icons">logout</i>
+        </div>
+      </div>
+    </nav>
+  </aside>
+  <div id="dashboard-content" class="slide-page"></div>
+</section>

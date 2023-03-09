@@ -1,0 +1,69 @@
+body
+  .dashboard
+    background-color: #ebebeb
+    width: 100%
+    height: auto
+    min-height: 100vh
+    &.bg-dark
+      color: #ebebeb
+    nav
+      padding: .8em
+      background-color: #1E2129
+      margin-bottom: .8em
+      height: 70.59px
+      transition: all .5s ease-in-out
+      &.main-nav
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+      .btnMenu
+        border: 0
+        padding: 0
+        width: 24px
+        height: 24px
+        background-color: transparent
+        position: absolute
+        left: .7em
+        outline: none
+        z-index: 100
+        display: none
+      .logo
+        img
+          width: 45px
+          display: block
+          margin: auto
+          margin-right: 0
+    aside
+      background-color: #2B2F3A
+      width: 260px
+      height: 100vh
+      position: fixed
+      top: 0
+      left: -193.8px
+      z-index: 99
+      transition: all .5s ease-in-out
+      &.open
+        left: 0
+      .menu
+        margin-top: 1em
+        .item
+          color: #ebebeb
+          padding: 1em
+          padding-right: .5em
+          padding-bottom: .3em
+          display: flex
+          align-items: center
+          justify-content: space-between
+          cursor: pointer
+    #dashboard-content
+      transition: all .5s ease-in-out
+
+@media (max-width: 1200px)
+  body
+    .dashboard
+      nav
+        .btnMenu
+          display: block
+      aside
+        left: -260px    

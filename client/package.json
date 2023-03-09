@@ -1,0 +1,42 @@
+{
+  "name": "blots",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack -w",
+    "blots": "node node_modules/blots-generator/index.js"
+  },
+  "author": "devvime",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.9.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^1.3.1",
+    "blots": "^1.0.9",
+    "blots-generator": "^1.0.2",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.2",
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0",
+    "page": "^1.11.6",
+    "regenerator-runtime": "^0.13.9",
+    "sweetalert": "^2.1.2"
+  }
+}
