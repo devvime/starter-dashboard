@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',
+  // mode: 'production',
   module: {
     rules: [
       {
@@ -53,7 +54,7 @@ module.exports = {
     },
     compress: true,
     port: 5050,
-    open: true,
+    open: false,
     historyApiFallback: {
       index: 'index.html'
     }

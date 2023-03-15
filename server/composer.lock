@@ -63,16 +63,16 @@
         },
         {
             "name": "devvime/kiichi-php-engine",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devvime/kiichi-php-engine.git",
-                "reference": "71b74a1d34f8582bda91e48b46b270ae6c8f6fb4"
+                "reference": "aba916f67459da485a91dc2ec0eab64f426dc5b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devvime/kiichi-php-engine/zipball/71b74a1d34f8582bda91e48b46b270ae6c8f6fb4",
-                "reference": "71b74a1d34f8582bda91e48b46b270ae6c8f6fb4",
+                "url": "https://api.github.com/repos/devvime/kiichi-php-engine/zipball/aba916f67459da485a91dc2ec0eab64f426dc5b3",
+                "reference": "aba916f67459da485a91dc2ec0eab64f426dc5b3",
                 "shasum": ""
             },
             "require": {
@@ -103,22 +103,22 @@
             "description": "Simple Package PHP for developing web API`s with Kiichi PHP.",
             "support": {
                 "issues": "https://github.com/devvime/kiichi-php-engine/issues",
-                "source": "https://github.com/devvime/kiichi-php-engine/tree/v1.0.3"
+                "source": "https://github.com/devvime/kiichi-php-engine/tree/v1.0.4"
             },
-            "time": "2023-03-07T22:23:11+00:00"
+            "time": "2023-03-11T05:15:44+00:00"
         },
         {
             "name": "devvime/kiichi-php-generator",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devvime/kiichi-php-generator.git",
-                "reference": "134df32c9d07d9c57723408c1e3f9f58dc652e3f"
+                "reference": "b9b657c8c729572d5edd661194e42dba097aa6a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devvime/kiichi-php-generator/zipball/134df32c9d07d9c57723408c1e3f9f58dc652e3f",
-                "reference": "134df32c9d07d9c57723408c1e3f9f58dc652e3f",
+                "url": "https://api.github.com/repos/devvime/kiichi-php-generator/zipball/b9b657c8c729572d5edd661194e42dba097aa6a7",
+                "reference": "b9b657c8c729572d5edd661194e42dba097aa6a7",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "description": "Simple Package PHP for generate controllers, models and middlewares.",
             "support": {
                 "issues": "https://github.com/devvime/kiichi-php-generator/issues",
-                "source": "https://github.com/devvime/kiichi-php-generator/tree/v1.0.1"
+                "source": "https://github.com/devvime/kiichi-php-generator/tree/v1.0.2"
             },
-            "time": "2023-03-08T01:48:22+00:00"
+            "time": "2023-03-11T05:10:04+00:00"
         },
         {
             "name": "doctrine/inflector",

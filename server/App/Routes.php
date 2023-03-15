@@ -22,7 +22,9 @@ $app->group('/user', function() use($app) {
 
 $app->group('/auth', function() use($app) {
     $app->post('', 'AuthController@index');
-    $app->get('/verify', function($req, $res) {}, 'AuthMiddleware@verify');
+    $app->post('/recover-pass', 'RecoverPasswordController@index');
+    $app->post('/recover-password', 'RecoverPasswordController@store');
+    $app->get('/verify', function($req, $res) {}, 'AuthMiddleware@verify');    
 });
 
 $app->run();

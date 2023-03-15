@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack -w",
+    "build": "webpack",
     "blots": "node node_modules/blots-generator/index.js"
   },
   "author": "devvime",

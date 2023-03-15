@@ -14,7 +14,8 @@ class AuthController extends ControllerService {
         self::$authModel = new AuthModel();
     }
 
-    public function index($req, $res) {
+    public function index($req, $res) 
+    {
         $user = AuthModel::select('id','name','email')
         ->where('email', $req->body->email)
         ->where('password', $this->jwtEncrypt($req->body->password))->first();

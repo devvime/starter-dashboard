@@ -10,6 +10,7 @@ import userComponent from './components/dashboard/pages/config/user/userComponen
 window.blots = blots
 
 blots.route('/', () => new Login)
+blots.route('/recover-password/:token', (req) => new Login(req))
 blots.route('/dashboard', () => new dashboardComponent({ child: homeComponent }))
 blots.route('/user-config', () => new dashboardComponent({ child: userComponent }))
 blots.route('*', () => new pageNotFoundComponent)

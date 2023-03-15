@@ -4,10 +4,24 @@ body
     display: none
     margin-right: 8px
     margin-top: 4px
-  .box
-    background-color: #ebebeb
-    padding-right: 1.5em
+  .loading
     width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+  .swal-text
+    text-align: center
+  .box
+    background-color: #f5f5f5
+    padding-right: 1.5em
+    width: 100%    
     transition: all .5s
     img
       width: 100%
@@ -16,16 +30,30 @@ body
     .col-forms
       display: flex
       align-items: center
+      min-width: 332.72px
       .forms
         width: 100%
+        position: relative
         h2
           font-size: 2.5em
           color: #333
-    #register
+    #login,
+    #register,
+    #recover-pass,
+    #recover-password
       display: none
       i
         cursor: pointer
-        color: #333       
+        color: #333 
+    .btn-recover-pass
+      cursor: pointer
+      transition: all .5s
+      width: fit-content
+      border-bottom: 1px solid transparent
+      font-size: 14px
+      &:hover
+        transition: all .2s
+        border-bottom: 1px solid #333
 
 @media (max-width: 991px)
   body
@@ -37,3 +65,5 @@ body
       transition: all .5s
       img
         display: none
+      .col-forms
+        min-width: 280px

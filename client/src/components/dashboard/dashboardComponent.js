@@ -5,9 +5,7 @@ import logo from '../../images/raven.png'
 import $ from 'jquery'
 import swal from 'sweetalert'
 import AuthService from '../../services/authService'
-import { welcome } from '../../core/utils/utils'
-import homeComponent from './pages/home/homeComponent'
-import userComponent from './pages/config/user/userComponent'
+import { welcome, parser } from '../../core/utils/utils'
 
 export default class dashboardComponent {
 
@@ -64,7 +62,7 @@ export default class dashboardComponent {
 
   logout() {
     $('#logout').click(function() {
-      swal('Bye-bye', JSON.parse(localStorage.getItem('currentUser')).name, "success");
+      swal('Bye-bye', parser(localStorage.getItem('currentUser')).name, "success");
       localStorage.removeItem('currentUser')
       localStorage.removeItem('token')
       localStorage.removeItem('asideIsOpen')
@@ -80,7 +78,7 @@ export default class dashboardComponent {
     blots.draw('#content', html, {
       logo,
       welcome,
-      name: JSON.parse(localStorage.getItem('currentUser'))?.name
+      name: parser(localStorage.getItem('currentUser'))?.name
     })
   }
 }

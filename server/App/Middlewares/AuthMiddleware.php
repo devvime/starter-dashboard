@@ -26,7 +26,7 @@ class AuthMiddleware {
         $token = $this->httpService->verifyAuthToken();
         $res->json([
             "status"=>200,
-            "result"=>$token
+            "result"=>$this->controllerService->jwtEncrypt($token)
         ]);
         exit;
     }

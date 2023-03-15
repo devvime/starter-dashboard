@@ -10,4 +10,8 @@ export default class UserService {
         return await api.post('/register', data)
     }
 
+    async recoverPass(data) {
+        return await api.post('/auth/recover-pass', data)
+    }
+
 }
