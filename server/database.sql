@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 16/03/2023 às 23:46
+-- Tempo de geração: 24/03/2023 às 22:49
 -- Versão do servidor: 10.5.16-MariaDB-cll-lve
 -- Versão do PHP: 7.2.34
 
@@ -48,16 +48,11 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` int(11) NOT NULL DEFAULT 0,
+  `info` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Despejando dados para a tabela `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES
-(1, 'User', 'user@user.com', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InVzZXIi.iMI2OmFx32CpJttaH4Ek72ALTWqFRsgY1YWpXND5plQ', 0, '2023-03-16 23:44:51', '2023-03-16 23:44:51');
 
 --
 -- Índices para tabelas despejadas
@@ -85,13 +80,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `recoverPasswords`
 --
 ALTER TABLE `recoverPasswords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

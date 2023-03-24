@@ -1,4 +1,4 @@
-<section class="dashboard">
+<section class="dashboard">  
   <nav class="main-nav bg-light slide-page">
     <button class="btnMenu"><i class="material-icons">menu</i></button>
     <p class="text-center mb-0">{{ welcome }}, {{ name }}</p>
@@ -12,7 +12,7 @@
         <div class="item" onclick="blots.redirect('/dashboard')">
           Dashboard <i class="material-icons">dashboard</i>
         </div>
-        <div class="item" onclick="blots.redirect('/user-config')">
+        <div class="item" onclick="blots.redirect('/user/config')">
           User config <i class="material-icons">settings</i>
         </div>
         <div class="item" id="logout">
@@ -21,5 +21,11 @@
       </div>
     </nav>
   </aside>
-  <div id="dashboard-content" class="slide-page"></div>
+  <div id="dashboard-content" class="slide-page">
+    <div class="d-flex justify-content-center pt-5 loading">
+      <div class="spinner-grow" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
 </section>

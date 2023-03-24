@@ -15,7 +15,7 @@ class UserController extends ControllerService {
     }
 
     public function index($req, $res) {
-        $result = self::$userModel->all('id', 'name', 'email');
+        $result = self::$userModel->all('id', 'name', 'email', 'info');
         $res->json([
             "status"=>200,
             "data"=>$result
@@ -24,13 +24,13 @@ class UserController extends ControllerService {
 
     public function find($req, $res)
     {
-        $result = UserModel::find($req->params->id, ['id', 'name', 'email']);
+        $result = UserModel::find($req->params->id, ['id', 'name', 'email', 'info']);
         if ($result == null) {
             $res->json(["status"=>404, "error"=>"Register Not Found..."]);
             exit;
         }
         $res->json([
-            "staus"=>200,
+            "status"=>200,
             "data"=>$result
         ]);
     }
@@ -39,7 +39,7 @@ class UserController extends ControllerService {
         $this->validate($req->body, 'name', 'required');
         $this->validate($req->body, 'email', 'required');
         $this->validate($req->body, 'email', 'isEmail');
-        $this->validate($req->body, 'password', 'required');
+        $this->validate($req->body, 'password', 'required');        
         $existData = UserModel::select('id')->where('email', $req->body->email)->first();
         if ($existData === null) {
             $req->body->password = $this->jwtEncrypt($req->body->password);
@@ -61,7 +61,7 @@ class UserController extends ControllerService {
             exit;
         }
         if (isset($req->body->password)) {
-            $data->password = $this->jwtEncrypt($req->body->password);
+            $req->body->password = $this->jwtEncrypt($req->body->password);
         }
         $data = $this->bindValues($req->body, $data);
         $result = $data->save();

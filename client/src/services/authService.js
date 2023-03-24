@@ -10,8 +10,9 @@ export default class AuthService {
   }
 
   async verify() {
-    return await api.get('/auth/verify').then(res => {
-      if (res.data.status === 401) {
+    return await api.get('/auth/verify').then(res => {      
+      if (res.data.status === 401) {        
+        blots.redirect('/')
         localStorage.removeItem('currentUser')
         localStorage.removeItem('token')
         swal("Ops!", res.data.error, "error");
@@ -23,6 +24,10 @@ export default class AuthService {
           swal(welcome(), parser(res.data.result).name, "success");
         }
       }
+    }).catch(err => {
+      localStorage.removeItem('currentUser')
+      localStorage.removeItem('token')
+      blots.redirect('/')
     })
   }
 

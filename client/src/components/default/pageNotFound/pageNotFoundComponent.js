@@ -1,8 +1,8 @@
 import { blots } from 'blots'
-import './pageNotFoundComponent.sass'
-import html from './pageNotFoundComponent.html'
+import './PageNotFoundComponent.sass'
+import html from './PageNotFoundComponent.html'
 
-export default class pageNotFoundComponent {
+export default class PageNotFoundComponent {
 
     constructor() {
         this.init()

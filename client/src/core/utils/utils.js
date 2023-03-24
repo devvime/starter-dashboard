@@ -11,7 +11,11 @@ export const serializeForm = (target) => {
 
 export const api = axios.create({
   baseURL: dev ? apiDevURL : apiURL,
-  headers: { 'Authorization': 'Bearer ' + token }
+  headers: { 
+    'Authorization': 'Bearer ' + token, 
+    'Access-Control-Allow-Origin': '*', 
+    'Content-Type': 'application/json;charset=utf-8'
+  }
 })
 
 export const welcome = () => {

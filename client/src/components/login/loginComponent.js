@@ -1,11 +1,11 @@
 import { blots } from 'blots'
-import './loginComponent.sass'
-import html from './loginComponent.html'
+import './LoginComponent.sass'
+import html from './LoginComponent.html'
 import $ from 'jquery'
 import { serializeForm, parser } from '../../core/utils/utils'
 import swal from 'sweetalert'
-import UserService from '../../services/userService'
-import AuthService from '../../services/authService'
+import UserService from '../../services/UserService'
+import AuthService from '../../services/AuthService'
 
 export default class loginComponent {
 

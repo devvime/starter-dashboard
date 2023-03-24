@@ -22,6 +22,9 @@ body
 .uppercase
   text-transform: uppercase
 
+.bold
+  font-weight: bold
+
 .btnDefault
   border: 2px solid #333
   border-radius: 20px
@@ -35,9 +38,19 @@ body
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     background-color: #333
     color: #fff
+    @media (max-width: 991px)
+      padding: .5em 1.5em
+
   &.black
     background-color: #333
     color: #fff
+    &:hover
+      background-color: transparent
+      color: #333
+  &.discreet
+    padding: .3em 1.8em
+    border: 1px solid #333
+    border-radius: 5px
 
 .material-icons
   font-family: 'Material Icons'
@@ -64,9 +77,11 @@ body
   &:hover 
     background-color: transparent!important
     color: #333
+
 .container
   @media (max-width: 1200px)
     max-width: none
+
 
 
   

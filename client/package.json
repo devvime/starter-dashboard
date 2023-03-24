@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve && webpack --watch",
     "build": "webpack",
     "blots": "node node_modules/blots-generator/index.js"
   },

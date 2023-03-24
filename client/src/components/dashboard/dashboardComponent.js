@@ -1,13 +1,13 @@
 import { blots } from 'blots'
-import './dashboardComponent.sass'
-import html from './dashboardComponent.html'
+import './DashboardComponent.sass'
+import html from './DashboardComponent.html'
 import logo from '../../images/raven.png'
 import $ from 'jquery'
 import swal from 'sweetalert'
-import AuthService from '../../services/authService'
+import AuthService from '../../services/AuthService'
 import { welcome, parser } from '../../core/utils/utils'
 
-export default class dashboardComponent {
+export default class DashboardComponent {
 
   constructor(props) {
     this.props = props
@@ -25,18 +25,18 @@ export default class dashboardComponent {
 
   aside() {
     if (window.innerWidth > 1200) {
-      dashboardComponent.openAside()      
+      DashboardComponent.openAside()      
       if (!localStorage.getItem('asideIsOpen')) {
         setTimeout(() => {
-          dashboardComponent.closeAside()  
+          DashboardComponent.closeAside()  
         }, 500);
       }
       $('aside').on('mouseover', function() {
-        dashboardComponent.openAside()
+        DashboardComponent.openAside()
         localStorage.setItem('asideIsOpen','true')
       })
       $('aside').on('mouseout', function() {
-        dashboardComponent.closeAside()
+        DashboardComponent.closeAside()
         localStorage.removeItem('asideIsOpen')
       })
     }

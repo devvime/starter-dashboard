@@ -11,7 +11,7 @@ class AuthMiddleware {
     private $controllerService;
 
     public function __construct()
-    {
+    {        
         $this->httpService = new HttpService;
         $this->controllerService = new ControllerService;
     }

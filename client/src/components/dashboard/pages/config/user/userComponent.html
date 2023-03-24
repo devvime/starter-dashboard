@@ -1,9 +1,39 @@
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p>Config user page.</p>
-            </div>
-        </div>
+<section class="userComponent">
+  <div class="d-flex justify-content-center loading">
+    <div class="spinner-grow" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
+  </div>
+  <div class="container">
+    <div class="row gx-2">
+      <div class="col-md-4 col-user mb-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="img" style="background-image: url({{user.img}});"></div>
+            <h4 class="bebas">{{user.name}}</h4>
+            <p class="text-center">{{user.info}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <form id="updateUserForm">
+              <input type="text" name="name" placeholder="Name..." value="{{user.name}}" class="form-control mb-2">
+              <input type="email" name="email" placeholder="Email..." value="{{user.email}}" class="form-control mb-2">
+              <textarea name="info" rows="2" placeholder="Info..." class="form-control mb-3">{{user.info}}</textarea>
+              <button class="btnDefault" type="button" id="btnUpdateUser">
+                <p class="mb-0">
+                  <span class="spinner-border spinner-border-sm load" role="status" aria-hidden="true" id="saveLoad"></span>
+                  Save
+                </p>
+              </button>
+              <button class="btnDefault black" type="button" data-bs-toggle="modal"
+                data-bs-target="#updatePasswordModal">Update Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

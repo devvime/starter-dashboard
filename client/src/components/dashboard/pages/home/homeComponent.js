@@ -1,7 +1,7 @@
 import { blots } from 'blots'
-import './homeComponent.sass'
-import html from './homeComponent.html'
-export default class homeComponent {
+import './HomeComponent.sass'
+import html from './HomeComponent.html'
+export default class HomeComponent {
 
   constructor() {
     this.init()
